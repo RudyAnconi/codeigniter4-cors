@@ -40,6 +40,20 @@ public $aliases = [
 ];
 ```
 
+Then enable the filter to be runned every request on the `$globals` property:
+
+```php
+public array $globals = [
+    'before' => [
+        'cors',
+        // ...
+    'after' => [
+        'cors',
+        // ...
+    ],
+];
+```
+
 ### **Global restrictions**
 Restrict routes based on their URI pattern by editing **app/Config/Filters.php** and adding them to the
 `$filters` array, e.g.:
